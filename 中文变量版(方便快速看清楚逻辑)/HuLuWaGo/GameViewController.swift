@@ -13,12 +13,8 @@ import GameplayKit
 var 宽:CGFloat = 640  // 这个默认值其实没啥用，知识用来初始化而已， 这个 屏幕的宽和1高都在下面的函数中设定！
 var 高:CGFloat = 320 // 这个默认值其实没啥用，知识用来初始化而已， 这个 屏幕的宽和1高都在下面的函数中设定！
 class GameViewController:UIViewController{
-    
-    
-
     override func viewDidLoad() {
             super.viewDidLoad()
-            
             if let view = self.view as! SKView? {
                 /**
                                  下面这句话是通过sks文件才创建场景的，需要删除掉 SKScene内容。

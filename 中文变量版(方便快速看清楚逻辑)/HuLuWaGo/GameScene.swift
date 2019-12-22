@@ -135,11 +135,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     var 节点 :SKSpriteNode!  //节点
     var 开始游戏按钮:SKSpriteNode!  //开始游戏按钮
   
-    
 
-   
-
-    
 
     let k字体名字 = "AmericanTypewriter-Bold"  //k字体名字
     var 得分标签:SKLabelNode!   //得分标签
@@ -161,7 +157,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
     override func didMove(to view: SKView) {  //dieMove 是系统函数，这个是在整个scene展示出来的时候被调用的一个系统函数
          
         //所以我们可以在这个函数里面调用布置主菜单的代码！
-        
         //关掉重力
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         //设置碰撞代理
@@ -543,7 +538,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate
          addChild(毒烟)
        }
     
-    func 移动背景() //移动毒烟
+    func 移动背景() //移动背景
       {
        底部图片.position = CGPoint(x: 底部图片.position.x - 1, y: 0) //背景开始不停滴向左移动
        中部图片.position = CGPoint(x: 中部图片.position.x - 1, y: 0)
@@ -1052,7 +1047,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
         匹配单位.run(SKAction.sequence([SKAction.fadeOut(withDuration: 0.05),
                                             SKAction.removeFromParent()
             ]))}) // 删除主菜单的所有节点
-       
        设置主角()
        设置得分标签()
        重复添加金币()
@@ -1062,8 +1056,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate
        重复添加妖怪二()
        重复添加妖怪三()
        重复添加妖怪四()
-    
-        
     }
     
     func 开始新游戏() //开始新游戏
